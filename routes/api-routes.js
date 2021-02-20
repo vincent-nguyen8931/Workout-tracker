@@ -1,5 +1,5 @@
 var router = require("express").Router();
-var Workout = require("../models/workout")
+var Workout = require("../models/workout.js")
 
 router.get("/api/workouts", (req, res) => {
   Workout.find({}).then(dbWorkout => {
@@ -30,10 +30,5 @@ router.post("/api/workouts/range",(req, res) => {
   });
 });
 
-
-
-module.exports = function (app) {
-
-}
 
 // query database
