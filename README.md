@@ -18,12 +18,11 @@ Tracker will track current workout being performed. Exercises can be added throu
 
 Tools used
 -------------------
-* Bulma - CSS framework to help style the code efficiently.
 * Express - Link front end and back end together via routes.
 * GitBash - Assist with version control via commits, push, and pull to and from GitHub.
 * GitHub - Site where the repository lies for deployment and edits.
-* Handlebars - Gives template used to help bring code from the backend to frontend for HTML design.
-* MySQL - Database to store data for application use.
+* MongoDB - Stores the data of the exercises being performed.
+* Mongoose - Object data modeler allowing for creation of models to be used with mongoDB.
 * Node.js - Build the template and all functions in application. 
 * VS Code - Application used to write and edit code for the application.
 
@@ -37,14 +36,22 @@ Below is the link to the deployed site. <br />
 Features
 ------------------
 
-The user has the capablity to add burgers to either list of not eaten or devoured burgers. Once added, the burgers may be eaten or ordered again by clicking on their respective buttons. This will move the burger to the opposite list to demonstrate whether the burger has or has not been eaten.
+The application utilizes the MVC architecture. This allows for nice organization of the files by their purpose. There is also continuous calculations of all the exercises performed throughout the workout to keep the user up to date with what they have done. 
+
+Lessons learned
+---------------------
+The biggest struggle with this application has been to find the proper routes to create in order to link with the existing frontend files. I believe I had gotten the routes correct and functional however no data is being passed from the frontend to the backend, specifically to the file workout.js in the public folder. This hiccup has taken a significant time to debug and no resolution has been reached.
+
+There is a task to have another field created dynamically that adds the total length of workout time based on every exercise done. This test could not be performed due to the above task being unsolved.
+
+These combined errors have also made it so that the application on Heroku will not load. I imagine that once these issues have a solution along with no other errors coming up, the app will run with mongoDB on Heroku.
 
 
 Credits
 ---------------
 LinkedIn: [https://www.linkedin.com/in/vincent-nguyen-74226a107/](https://www.linkedin.com/in/vincent-nguyen-74226a107/) <br />
 GitHub: [https://github.com/vincent-nguyen8931](https://github.com/vincent-nguyen8931) <br />
-Portfolio: [https://vincent-nguyen8931.github.io/Vincent-nguyen8931-portfolio/](https://vincent-nguyen8931.github.io/Vincent-nguyen8931-portfolio/)
+Portfolio: [https://vincent-nguyen8931.github.io/Vincent-Nguyen-Portfolio/](https://vincent-nguyen8931.github.io/Vincent-Nguyen-Portfolio/)
 
 
 License
