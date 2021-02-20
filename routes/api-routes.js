@@ -2,6 +2,7 @@ var Workout = require("../models/Workout.js")
 
 module.exports = function (app) {
 
+  // gets every workout and apply to last workout
   app.get("/api/workouts", (req, res) => {
   Workout.find({})
   .then(dbWorkout => {
@@ -13,6 +14,7 @@ module.exports = function (app) {
   });
 });
 
+// creates a new workout
 app.post("/api/workouts",({body}, res) => {
   Workout.create(body)
   .then(dbWorkout => {
@@ -23,6 +25,7 @@ app.post("/api/workouts",({body}, res) => {
   });
 });
 
+// adds new exercise to last workout
 app.put("/api/workouts/:id",(req, res) => {
    Workout.findOneAndUpdate({_id: req.params.id
   }, 
@@ -36,6 +39,7 @@ app.put("/api/workouts/:id",(req, res) => {
   });
 });
 
+// sends last workout data to the chart in stats page
 app.get("/api/workouts/range",(req, res) => {
   Workout.find({})
   .then(dbWorkout => {
