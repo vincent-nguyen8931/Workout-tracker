@@ -2,6 +2,7 @@ var Workout = require("../models/Workout.js")
 
 module.exports = function (app) {
 
+  // gets every workout and apply to last workout
   app.get("/api/workouts", (req, res) => {
     Workout.find({})
       .then(dbWorkout => {
